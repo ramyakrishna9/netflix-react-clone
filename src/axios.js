@@ -8,3 +8,4 @@ const instance = axios.create({
 
 
 export default instance;
+//if the axios is not detecting then we can do npm install -- save axios

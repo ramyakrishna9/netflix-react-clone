@@ -1,14 +1,28 @@
 import React from "react";
 import Row from "./Row";
 import './App.css';
-import request from "./request";
+import requests from "./requests";
+import Nav from "./Nav";
+import Banner from "./Banner";
 
 function App() {
   return (
-    <div className="App">
-      <h1>let's build a netflix-clone</h1>
-      <Row title="NETFLIX ORIGINALS" fetchUrl={request. fetchNetflixOriginals} />
-      <Row title="Trending" fetchUrl={request.fetchTrending}/>
+    <div className="app">
+       <Nav />
+       <Banner />
+      <Row 
+        title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} 
+        isLargeRow 
+      />
+      <Row title="Trending" fetchUrl={requests.fetchTrending}/>
+      <Row title="Top rated" fetchUrl={requests.fetchTopRated}/>
+      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}/>
+      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies}/>
+      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies}/>
+      <Row title="Romantic Movies" fetchUrl={requests.fetchRomanceMovies}/>
+      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries}/>
+      
+      
     </div>
   );
 }
